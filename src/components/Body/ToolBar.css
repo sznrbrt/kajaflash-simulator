@@ -2,3 +2,9 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.timeindicator {
+  position: relative;
+  top: -5px;
+  margin-left: 10px;
+}

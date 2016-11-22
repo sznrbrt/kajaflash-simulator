@@ -10,8 +10,13 @@ export default class ToolBar extends Component {
         <Row>
           <Col xs={12}>
             <div className='toolBar'>
+              <Col xs={1}>
+                <Button iconName="play" text={'Start'} className='pt-intent-success' onClick={this.props.startSimulation} />
+              </Col>
               <Col xs={4}>
-                <Button iconName="play" text={'Start'} className='pt-intent-success' />
+                <div className="timeindicator">
+                  <h4>Time: {this.props.time.h}:{this.props.time.m}</h4>
+                </div>
               </Col>
             </div>
           </Col>
