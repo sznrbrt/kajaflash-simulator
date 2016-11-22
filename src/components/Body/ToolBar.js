@@ -5,19 +5,20 @@ import './ToolBar.css'
 
 export default class ToolBar extends Component {
   render() {
+    let min = this.props.time.m < 10 ? "0" + this.props.time.m.toString() : this.props.time.m;
     return(
       <div>
         <Row>
           <Col xs={12}>
             <div className='toolBar'>
-              <Col xs={1}>
+              <div className='buttonGroup'>
                 <Button iconName="play" text={'Start'} className='pt-intent-success' onClick={this.props.startSimulation} />
-              </Col>
-              <Col xs={4}>
-                <div className="timeindicator">
-                  <h4>Time: {this.props.time.h}:{this.props.time.m}</h4>
-                </div>
-              </Col>
+                <Button iconName="refresh" text={''} onClick={this.props.restartSimulation} />
+                <Button iconName="pause"  disabled={false} text={''} onClick={this.props.pauseSimulation} />
+              </div>
+              <div className="timeindicator">
+                <h4>Time: {this.props.time.h}:{ min }</h4>
+              </div>
             </div>
           </Col>
         </Row>
