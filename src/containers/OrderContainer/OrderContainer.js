@@ -18,12 +18,13 @@ export default class OrderContainer extends Component {
         <div className='titlebox text-center'>
           <h3 className='title noMarPad'>Orders</h3>
         </div>
-        <Table numRows={100} columnWidths={[190,190,190,190,190]} isColumnResizable={false}>
+        <Table numRows={100} columnWidths={[160,160,160,160,160,160]} isColumnResizable={false}>
           <Column name="Queue" renderCell={renderCell} />
           <Column name="Processing" renderCell={renderCell} />
           <Column name="Dispatching" renderCell={renderCell} />
           <Column name="Ready" renderCell={renderCell} />
           <Column name="Under delivery" renderCell={renderCell} />
+          <Column name="Delivered" renderCell={renderCell} />
         </Table>
       </div>
     );
