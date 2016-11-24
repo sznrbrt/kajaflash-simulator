@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ToolBar from '../../components/Body/ToolBar';
+import MapContainer from '../../containers/MapContainer/MapContainer';
+import { Col, Row } from 'react-bootstrap';
 
 export default class BodyContainer extends Component {
   constructor(props) {
@@ -56,6 +58,11 @@ export default class BodyContainer extends Component {
           startSimulation={this.startSimulation}
           restartSimulation={this.restartSimulation}
           pauseSimulation={this.pauseSimulation} />
+        <Row>
+          <Col xs={6}>
+            <MapContainer />
+          </Col>
+        </Row>
       </div>
     );
   }
