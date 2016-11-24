@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ToolBar from '../../components/Body/ToolBar';
 import MapContainer from '../../containers/MapContainer/MapContainer';
 import { Col, Row } from 'react-bootstrap';
+import OrderContainer from '../../containers/OrderContainer/OrderContainer';
 
 export default class BodyContainer extends Component {
   constructor(props) {
@@ -59,8 +60,13 @@ export default class BodyContainer extends Component {
           restartSimulation={this.restartSimulation}
           pauseSimulation={this.pauseSimulation} />
         <Row>
-          <Col xs={6}>
+          <Col xs={8}>
             <MapContainer />
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <OrderContainer />
           </Col>
         </Row>
       </div>
