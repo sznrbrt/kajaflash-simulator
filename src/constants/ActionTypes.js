@@ -1,3 +1,4 @@
 export let ActionTypes = {
-
+  RECEIVE_OPENORDERS: "RECEIVE_OPENORDERS",
+  OPEN_ONE_ORDER: "OPEN_ONE_ORDER"
 }
