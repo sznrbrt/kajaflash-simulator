@@ -2,10 +2,10 @@ import AppDispatcher from "../AppDispatcher";
 import {ActionTypes} from "../constants/ActionTypes";
 
 let ServerActions = {
-  receiveOpenOrder(orderData) {
+  receiveOpenOrders(orderData) {
     AppDispatcher.dispatch({
       actionType: ActionTypes.RECEIVE_OPENORDERS,
-      orders
+      orderData
     })
   }
 }

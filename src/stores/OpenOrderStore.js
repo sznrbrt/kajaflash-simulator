@@ -10,8 +10,10 @@ class OpenOrderStore extends EventEmitter {
       AppDispatcher.register(action => {
           switch(action.actionType) {
             case ActionTypes.RECEIVE_OPENORDERS:
-                _openOrders = action.orders;
+                _openOrders = action.orderData;
                 this.emit("change");
+                break;
+            default:
                 break;
           }
       })
