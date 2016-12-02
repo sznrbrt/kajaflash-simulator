@@ -34,7 +34,8 @@ export default class OrderContainer extends Component {
     };
 
     const renderQueueCell = (rowIndex: number) => {
-        return <Cell>{`$${(rowIndex * 10).toFixed(2)}`}</Cell>
+        let order = this.state.openOrders ? this.state.openOrders[rowIndex] : null;
+        return <Cell>{order ? order.id : null}</Cell>
     };
 
     return(
@@ -42,7 +43,7 @@ export default class OrderContainer extends Component {
         <div className='titlebox text-center'>
           <h3 className='title noMarPad'>Orders</h3>
         </div>
-        <Table numRows={100} columnWidths={[160,160,160,160,160,160]} isColumnResizable={false}>
+        <Table numRows={100} columnWidths={[200,200,200,200,200,200]} isColumnResizable={false}>
           <Column name="Queue" renderCell={renderQueueCell} />
           <Column name="Processing" renderCell={renderCell} />
           <Column name="Dispatching" renderCell={renderCell} />
